@@ -1,0 +1,14 @@
+:root{
+    --quasi-black: #171717;
+    --rifle-green: #4a5043;
+    --ash-grey: #b8bdb5;
+    --orange: #ffa62b;
+    --platinum: #ede7e3;
+    --ming: #16697a;
+    --blue-green: #489fb5;
+    --middle-blue: #82c0cc;
+}
+
+*{
+    font-family: 'Aleo', serif;
+}
