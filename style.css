@@ -1,5 +1,4 @@
 :root{
-    --quasi-black: #171717;
     --rifle-green: #4a5043;
     --ash-grey: #b8bdb5;
     --orange: #ffa62b;
@@ -7,8 +6,132 @@
     --ming: #16697a;
     --blue-green: #489fb5;
     --middle-blue: #82c0cc;
+    --quasi-black: #171717;
+    --quasi-white: #e3f0f3a0;
 }
 
 *{
     font-family: 'Aleo', serif;
+}
+
+body{
+    background-color: var(--quasi-white);
+}
+
+/* NAVBAR */
+#puntino{
+    color: var(--orange);
+}
+
+.p-nav{
+    background-color: transparent;
+}
+
+.p-nav .nav-brand{
+    color: var(--rifle-green);
+}
+
+/* link */
+.p-nav .nav-link{
+    color: var(--rifle-green);
+    /* color: var(--rifle-green); */
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+/* non va più, chiedi perché dopo js niente più over */
+.p-nav .nav-link:hover{
+    /* color: var(--rifle-green); */
+    color: var(--ash-grey);
+    font-size: 17px;
+}
+
+/* bottone navbar da hamburger a x */
+
+.navbar {
+    width: 100%;
+    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+  }
+  
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 62px; */
+  }
+.nav-container {
+    display: block;
+    position: relative;
+    /* height: 60px; */
+}
+
+.nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: auto;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: auto;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+}
+
+.nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+
+
+/* bottone cerca */
+.searchBtn{
+    position: absolute;
+    display: none;
+    right: 20px;
 }
