@@ -3,7 +3,7 @@
     --black: #1f1f1f;
     --text-gray: #525151;
     --emph-pink: rgb(255,214,233);
-    --bg-blur: rgba(255, 255, 255, .5);
+    --bg-blur: rgba(255, 255, 255, .4);
     --curve: 40;
     --shadow-card: 0.5711669325828552px 1.467785120010376px 3.46875px 0px rgba(0, 20, 82, 0.04), 2.611048936843872px 6.709875106811523px 9.75px 0px rgba(0, 20, 82, 0.05), 6.609217643737793px 16.984371185302734px 26.15625px 0px rgba(0, 20, 82, 0.07), 13.055244445800781px 33.549373626708984px 60px 0px rgba(0, 20, 82, 0.11);
 }
@@ -214,7 +214,7 @@
     background-color: var(--bg-blur); 
     backdrop-filter: blur(8px);
     transform: translateY(100%);
-    transition: .2s ease-in-out;
+    /* transition: .2s ease-in-out; */
 }
 
 .p-card:hover{
@@ -228,15 +228,19 @@
 .card__header {
     position: relative;
     display: flex;
-    align-items: center;
-
+    align-items: center;    
     gap: 2em;
     padding: 2em;
     border-radius: calc(var(--curve) * 1px) 0 0 0;    
     background-color: var(--bg-blur);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
     transform: translateY(-100%);
-    transition: .2s ease-in-out;
+    /* transition: .2s ease-in-out; */
+}
+
+.p-card:hover .card__header{
+    background-color: transparent;
+    backdrop-filter: none;
 }
 
 .card__arc {
@@ -265,8 +269,7 @@
 }
 
 .card__title {
-    font-size: 14px !important;
-    font-weight: 900 !important;
+    font-size: .8em;
     margin: 0 0 .3em;
     color: var(--black);
 }
@@ -325,3 +328,9 @@
 .lastCard .card__header{
     justify-content: start;
 }
+
+.lastCard .card__title{
+    font-size: 14px !important;
+    font-weight: 900 !important;
+}
+
