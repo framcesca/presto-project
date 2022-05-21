@@ -30,12 +30,20 @@
 
 .mc-pink{
     color: var(--emph-pink);
-}    
+}
+
+.mbg-pink{
+    background-color: var(--emph-pink);
+}
 
 /* font-weight */
 .fw-boldest{
     font-weight: 900;
 }    
+
+.fs-14{
+    font-size: 14px;
+}
 
 /* line-height */
 .lh-32{
@@ -294,7 +302,6 @@
 #heroBtn{
     color: var(--black);
     letter-spacing: 1px;
-    font-size: 14px;
     font-weight: 800;
     background-color:var(--bg-blur);
     box-shadow: var(--shadow-card);
@@ -431,3 +438,10 @@
 #message{
     min-height: 100px;
 }
+
+
+
+
+
+
+
