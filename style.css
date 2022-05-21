@@ -297,10 +297,17 @@
     font-size: 14px;
     font-weight: 800;
     background-color:var(--bg-blur);
+    box-shadow: var(--shadow-card);
     backdrop-filter: blur(8px);
     border: 1px solid var(--white);
     border-radius: 50px;
-}    
+    transition: .4s;
+}  
+
+#heroBtn:hover{
+    box-shadow: none;
+    transform: scale(1.1);
+}
 
 /* hero card */
 .heroCard .card__image{
@@ -400,6 +407,11 @@
 
 #contatti .form-control{
     border-radius: 16px;
+}
+
+#contatti .form-control:focus{
+    box-shadow: var(--emph-pink);
+    border: 3px solid var(--emph-pink);
 }
 
 #contattiBtn{
