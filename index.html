@@ -4,10 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Presto.it</title>
+
+    <link rel="shortcut icon" href="./media/informaticaCard.png" type="image/x-icon">
     <!-- google fonts: Karla -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- swiper -->
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- mio css -->
@@ -74,67 +81,50 @@
                     <button class="btn mt-3 py-2 px-4" id="heroBtn">Iscriviti</button>               
                 </div>
                 
+                <!-- categories -->
                 <div class="col-12 col-md-8">
                     <div class="row mb-lg-5">
-                        <div class="col-12 col-md-6 col-lg-3 heroCard1 mx-lg-5 py-3 ">
+                        <div class="col-12 col-md-6 col-lg-3 mx-lg-5 py-3 ">
                             <a href="" class="p-card heroCard">
                                 <img src="./media/category-oggettistica.jpg" class="img-fluid card__image" alt="" />
                                 <div class="card__overlay">
                                     <div class="card__header">
                                         <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                                        <!-- <img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" /> -->
                                         <div class="card__header-text text-center">
                                             <h3 class="card__title">Oggettistica  <span><i class="fa-solid fa-chevron-right"></i></span></h3>
-                                            <!-- <span class="card__tagline">Lorem ipsum dolor sit amet consectetur</span>            
-                                                <span class="card__status">1 hour ago</span> -->
                                         </div>
                                     </div>
-                                    <!-- <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p> -->
                                 </div>
                             </a>
-                            <!-- magara -->
-                            <!-- <button class="button button--janus"><span>Reshape</span></button> -->
                         </div>
 
-                        <div class="col-12 col-md-6 col-lg-3 heroCard2 ms-lg-5 py-3">
+                        <div class="col-12 col-md-6 col-lg-3 ms-lg-5 py-3">
                             <a href="" class="p-card heroCard">
                                 <img src="./media/category-informatica.jpg" class="card__image" alt="" />
                                 <div class="card__overlay">
                                     <div class="card__header">
                                         <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                                        <!-- <img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" /> -->
                                         <div class="card__header-text text-center">
                                             <h3 class="card__title">Elettronica  <span><i class="fa-solid fa-chevron-right"></i></span></h3>
-                                            <!-- <span class="card__tagline">Lorem ipsum dolor sit amet consectetur</span>            
-                                                <span class="card__status">1 hour ago</span> -->
                                         </div>
                                     </div>
-                                    <!-- <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p> -->
                                 </div>
                             </a>
-                            <!-- magara -->
-                            <!-- <button class="button button--janus"><span>Reshape</span></button> -->
                         </div>
                     </div>
                     <div class="row justify-content-end">
-                        <div class="col-12 col-md-6 col-lg-3 heroCard3 me-lg-5 py-3">
+                        <div class="col-12 col-md-6 col-lg-3 me-lg-5 py-3">
                             <a href="" class="p-card heroCard">
                                 <img src="./media/category-workout.jpg" class="card__image" alt="" />
                                 <div class="card__overlay">
                                     <div class="card__header">
                                         <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                                        <!-- <img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" /> -->
                                         <div class="card__header-text text-center">
                                             <h3 class="card__title">Workout  <span><i class="fa-solid fa-chevron-right"></i></span></h3>
-                                            <!-- <span class="card__tagline">Lorem ipsum dolor sit amet consectetur</span>            
-                                                <span class="card__status">1 hour ago</span> -->
                                         </div>
                                     </div>
-                                    <!-- <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p> -->
                                 </div>
                             </a>
-                            <!-- magara -->
-                            <!-- <button class="button button--janus"><span>Reshape</span></button> -->
                         </div>
 
                         <div class="col-12 col-md-6 col-lg-3 heroCard4 mx-lg-5 py-3">
@@ -143,18 +133,12 @@
                                 <div class="card__overlay">
                                     <div class="card__header">
                                         <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                                        <!-- <img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" /> -->
                                         <div class="card__header-text">
                                             <h3 class="card__title">Vintage  <span><i class="fa-solid fa-chevron-right"></i></span></h3>
-                                            <!-- <span class="card__tagline">Lorem ipsum dolor sit amet consectetur</span>            
-                                                <span class="card__status">1 hour ago</span> -->
                                         </div>
                                     </div>
-                                    <!-- <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p> -->
                                 </div>
                             </a>
-                            <!-- magara -->
-                            <!-- <button class="button button--janus"><span>Reshape</span></button> -->
                         </div>
                     </div>
                     
@@ -163,9 +147,112 @@
         </div>
     </section>
     
-    <div style="height: 4000px;"></div>
+    <!-- CAROUSEL ULTIMI ANNUNCI -->
+    <section class="container-lg mt-3 py-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="display-6 fw-boldest">Ultimi annunci</h2>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-12">
+                <!-- Slider main container -->
+                <div class="swiper last-prod-carousel">
+                    <!-- Additional required wrapper -->
+                    <div class=" swiper-wrapper">
+                        <!-- Slides -->
+                    
+                        <div class="swiper-slide py-5">
+                            <a href="" class="p-card lastCard">
+                                <img src="./media/giradischi.jpg" class="img-fluid card__image" alt="" />
+                                <div class="card__overlay">
+                                    <div class="card__header">
+                                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                                        <img class="card__thumb" src="./media/profile-img.jpg" alt="" />
+                                        <div class="card__header-text">
+                                            <h3 class="card__title fw-boldest">Giradischi 1988</h3>
+                                            <span class="card__tagline fw-light">Vintage</span>            
+                                            <span class="card__status fw-boldest">420$</span>
+                                        </div>
+                                    </div>
+                                    <p class="card__description">Vedi articolo <span><i class="fa-solid fa-chevron-right"></i></span></p>
+                                </div>
+                            </a>   
+                        </div>
+                        <div class="swiper-slide py-5">
+                            <a href="" class="p-card lastCard">
+                                <img src="./media/giradischi.jpg" class="img-fluid card__image" alt="" />
+                                <div class="card__overlay">
+                                    <div class="card__header">
+                                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                                        <img class="card__thumb" src="./media/profile-img.jpg" alt="" />
+                                        <div class="card__header-text">
+                                            <h3 class="card__title">Giradischi 1988</h3>
+                                            <span class="card__tagline">Vintage</span>            
+                                            <span class="card__status">420$</span>
+                                        </div>
+                                    </div>
+                                    <p class="card__description">Vedi articolo <span><i class="fa-solid fa-chevron-right"></i></span></p>
+                                </div>
+                            </a>   
+                        </div>
+                        <div class="swiper-slide py-5">
+                            <a href="" class="p-card lastCard">
+                                <img src="./media/giradischi.jpg" class="img-fluid card__image" alt="" />
+                                <div class="card__overlay">
+                                    <div class="card__header">
+                                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                                        <img class="card__thumb" src="./media/profile-img.jpg" alt="" />
+                                        <div class="card__header-text">
+                                            <h3 class="card__title">Giradischi 1988</h3>
+                                            <span class="card__tagline">Vintage</span>            
+                                            <span class="card__status">420$</span>
+                                        </div>
+                                    </div>
+                                    <p class="card__description">Vedi articolo <span><i class="fa-solid fa-chevron-right"></i></span></p>
+                                </div>
+                            </a>   
+                        </div>
+                        <div class="swiper-slide py-5">
+                            <a href="" class="p-card lastCard">
+                                <img src="./media/giradischi.jpg" class="img-fluid card__image" alt="" />
+                                <div class="card__overlay">
+                                    <div class="card__header">
+                                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                                        <img class="card__thumb" src="./media/profile-img.jpg" alt="" />
+                                        <div class="card__header-text">
+                                            <h3 class="card__title">Giradischi 1988</h3>
+                                            <span class="card__tagline">Vintage</span>            
+                                            <span class="card__status">420$</span>
+                                        </div>
+                                    </div>
+                                    <p class="card__description">Vedi articolo <span><i class="fa-solid fa-chevron-right"></i></span></p>
+                                </div>
+                            </a>   
+                        </div>
+                    
+                        
+                    <!-- If we need pagination -->
+                    <div class=" swiper-pagination"></div>
+                    
+                    <!-- If we need navigation buttons -->
+                    <div class=" swiper-button-prev d-none d-lg-flex"></div>
+                    <div class=" swiper-button-next  d-none d-lg-flex"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
     
-    
+
+
+
+
+
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/2ff2af688a.js" crossorigin="anonymous"></script>
     <!-- mio js -->
