@@ -166,11 +166,6 @@
     font-size: 17px;
 }
 
-.hero h2{
-    font-size: 65px;
-    line-height: 76px;
-}
-
 .hero .p2{
     font-size: 20px;
     color: var(--text-gray);
@@ -337,9 +332,14 @@
     font-weight: 900 !important;
 }
 
+/* .swiper-slide{
+    display: flex;
+    justify-content: center;
+} */
 
 
-/* WRITE SECTION */
+
+/* SCRIVI ANNUNCIO */
 .write-section{
     background: url('./media/bg-write.png');
     background-position: center;
