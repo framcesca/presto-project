@@ -280,8 +280,7 @@
 
 /* HERO */
 .hero{
-    background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%),
-    url('./media/bg-hero.jpg');
+    background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%), url('./media/bg-hero.jpg');
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -441,7 +440,31 @@
 
 
 
+/* FOOTER */
+.p-footer{
+    background: linear-gradient(to top, rgba(255, 206, 244, .2)20%, rgba(255, 255, 255, 0)50%), url('./media/bg-footer-palletta.png') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+}
 
+.p-footer .nav-link{
+    transition: .4s;
+}
 
+.p-footer .btn{
+    transition: .4s;
+}
 
+.p-footer .nav-link:hover, .p-footer .nav-link:focus {
+    color: var(--black);
+    transform: scale(1.1);
+}
+
+.p-footer .btn:hover{
+    background-color: var(--emph-pink); 
+    border-color: transparent;
+    transform: scale(1.1);
+}
 
