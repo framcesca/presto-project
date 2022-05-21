@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Presto.it</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./media/informaticaCard.png" type="image/x-icon">
+    <!-- google fonts: Karla -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- mio css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar p-nav fixed-top" aria-label="First navbar example">
+        <div class="container nav-container">
+            <a class="navbar-brand fs-1 fw-semibold mc-white" href="./index.html">presto<span class="mc-pink">.</span>it</a>
+            
+            <!-- search bar -->
+            <form role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cerca" aria-label="titolo annuncio" aria-describedby="basic-addon2" id="searchBar">
+                    <button class="input-group-text" id="searchBtn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </form>
+            
+            <div>
+                <input class="navbar-toggler collapsed checkbox" type="checkbox" name="" id="" data-bs-toggle="collapse" data-bs-target="#pNav" aria-controls="pNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-lines ">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>                     
+            </div>
+            
+            
+            <div class="navbar-collapse collapse" id="pNav">
+                <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Annunci</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <main style="min-height: 4000px;">
+        <!-- HEADER -->
+        <header class="container-fluid products-header pt-4">          
+            <div class="row h-100 mt-5 mt-md-0 align-items-center">
+
+                <div class="col-12 d-flex align-items-center justify-content-center pt-5 mt-5">
+                    <img src="./media/bg-hero-products.png" alt="">
+                </div>
+                
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                    <h2 class="fw-boldest display-5">Esplora gli anninci</h2>
+                </div>           
+            </div>       
+        </header>
+        
+
+        <!-- BARRA RICERCA CON FILTRI -->
+        <section class="container  filter-section">
+            <div class="row align-items-end bgc-sec pt-4">
+                <div class="col-12 col-md-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="mb-1 fw-boldest">Ricerca</p>
+                        </div>
+                        <div class="col-12 ps-1 form-floating mb-3">
+                            <input type="text" class="form-control" id="searchInput" placeholder="name@example.com">
+                            <label for="searchInput">Cerca un prodotto</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="mb-1 fw-boldest">Categoria</p>
+                        </div>
+                        
+                        <div class="col-12 ps-1 form-floating mb-3">
+                            <select class="form-select" id="categoryInput" aria-label="Floating label select example">
+                              <option selected value="all">Tutte</option>
+                            </select>
+                            <!-- <label for="categoryInput">Categoria</label> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="mb-1 fw-boldest ps-2">Prezzo</p>
+                        </div>
+                        <div class="col-6 pe-1">
+                            <div class="form-floating mb-3 px-1">
+                                <input type="number" class="form-control" id="minInput" placeholder="Prezzo minimo">
+                                <label for="minInput">Min</label>
+                            </div>
+                        </div>
+                        <div class="col-6 ps-1">
+                            <div class="form-floating mb-3 px-1">
+                                <input type="number" class="form-control" id="maxInput" placeholder="Prezzo massimo">
+                                <label for="maxInput">Max</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <button id="filterBtn" class="btn mbg-pink fw-boldest w-100 py-3 mb-3">Filtra</button>
+                </div>
+            </div>
+
+            <!-- filtri sotto -->
+            <div class="row mt-3">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-end">
+                      <!-- icone stile griglia -->
+                    <!-- <div>
+                        <i class="fa-solid fa-table-cells-large fs-4 me-2"></i>
+                        <i class="fa-solid fa-table-list fs-4"></i>
+                      
+                    </div> -->
+
+                    <!-- filtri ordinamento -->
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center">
+                            <button product-type="all" class="btn btn-select-type-product active">Tutti</button>
+                            <span>|</span>
+                            <button product-type="search" class="btn btn-select-type-product">Cerco</button>
+                            <span>|</span>
+                            <button product-type="sell" class="btn btn-select-type-product">Vendo</button>
+                        </div>
+                        <div id="order-icon" class="me-2 fs-5">
+                            <i class="fa-solid fa-arrow-down-short-wide"></i>
+                        </div>
+                        <select id="orderInput" class="form-select" aria-label="Default select example">
+                            <option selected value="fromOldest">
+                                Dal più vecchio
+                            </option>
+                            <option value="fromNewest">
+                                Dal più recente
+                            </option>
+                            <option value="fromCheapest">
+                                Dal meno costoso
+                            </option>
+                            <option value="toCheapest">
+                                Dal più costoso
+                            </option>
+                            <option value="fromAtoZ">
+                                Dalla A alla Z
+                            </option>
+                            <option value="fromZtoA">
+                                Dalla Z alla A
+                            </option>
+
+                        </select>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container">
+            <div class="row" id="productWrapper">
+
+            </div>
+        </section>
+
+
+
+    </main>
+    
+    <!-- FOOTER -->
+    <section class="container-fluid p-footer h-100">
+        <div class="row align-items-center justify-content-center h-100">
+            <div class="col-12 d-flex align-items-center justify-content-center mt-5">
+                <ul class="nav d-flex align-items-center justify-content-center">
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link px-5 fw-bold mc-black fs-14">Centro assistenza</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link px-5 fw-bold mc-black fs-14">FAQs</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link px-5 fw-bold mc-black fs-14">About</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link px-5 fw-bold mc-black fs-14">Join Us</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-12 d-flex align-items-center justify-content-center mb-5">
+                <ul class="nav ">
+                    <li class="nav-item m-2">
+                        <button class="btn mbg-pink  mc-black rounded-circle p-2 d-flex align-items-center"><i class="fa-regular fa-envelope"></i></button>                         
+                    </li>
+                    <li class="nav-item m-2">
+                        <button class="btn mbg-pink  mc-black rounded-circle p-2 d-flex align-items-center"><i class="fa-regular fa-message"></i></button>
+                    </li>
+                    <li class="nav-item m-2">
+                        <button class="btn mbg-pink  mc-black rounded-circle p-2 d-flex align-items-center"><i class="fa-regular fa-calendar-minus"></i></button>
+                    </li>
+                    <li class="nav-item m-2">
+                        <button class="btn mbg-pink  mc-black rounded-circle p-2 d-flex align-items-center"><i class="fa-solid fa-shield-halved"></i></button>
+                    </li>
+                    <li class="nav-item m-2">
+                        <button class="btn mbg-pink  mc-black rounded-circle p-2 d-flex align-items-center"><i class="fa-regular fa-clock"></i></button>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/2ff2af688a.js" crossorigin="anonymous"></script>
+    <!-- mio js -->
+    <script src="./script.js"></script>
+    <script src="./products.js"></script>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

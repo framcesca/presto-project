@@ -52,7 +52,11 @@
 
 .lh-27{
     line-height: 27px;
-}    
+}   
+
+/* .p-shadow{
+    box-shadow: 0.5711669325828552px 1.467785120010376px 3.46875px 0px rgba(0, 20, 82, 0.04), 2.611048936843872px 6.709875106811523px 9.75px 0px rgba(0, 20, 82, 0.05), 6.609217643737793px 16.984371185302734px 26.15625px 0px rgba(0, 20, 82, 0.07), 13.055244445800781px 33.549373626708984px 60px 0px rgba(0, 20, 82, 0.11);;
+} */
 
 /* CARD BASE */
 .p-card {
@@ -442,7 +446,7 @@
 
 /* FOOTER */
 .p-footer{
-    background: linear-gradient(to top, rgba(255, 206, 244, .2)20%, rgba(255, 255, 255, 0)50%), url('./media/bg-footer-palletta.png') ;
+    background: linear-gradient(to top, rgba(255, 206, 244, .4)20%, rgba(255, 255, 255, 0)50%), url('./media/bg-footer-palletta.png') ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -467,4 +471,40 @@
     border-color: transparent;
     transform: scale(1.1);
 }
+
+
+
+
+
+
+
+/* ####################################################################################################################################################################################################################################################################################### */
+
+
+/* PRODUCT PAGE */
+.products-header{
+    background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%), url('./media/bg-hero.jpg');
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top:auto;
+}    
+
+/* BARRA FILTRI */
+#filterBtn, #searchInput, #minInput, #maxInput, #categoryInput {
+    border-radius: 16px;
+}
+
+#filterBtn:hover{
+    background-color: var(--emph-pink); 
+    border-color: transparent;
+    transform: scale(1.1);
+}
+
+.btn-select-type-product:hover, .btn-select-type-product:focus, .btn-select-type-product.active{
+    border: 1px solid transparent;
+    font-weight: 900;
+}
+
 
