@@ -38,7 +38,7 @@
 
 /* NAVBAR */
 .p-nav{
-    background-color: rgba(39, 22, 51, 0.15);
+    background-color: rgba(39, 22, 51, 0.35);
     backdrop-filter: blur(8px);
 }
 
@@ -305,6 +305,14 @@
     justify-content: center;
 }
 
+.heroCard:hover{
+    transform: scale(1.1);
+}
+
+.heroCard:hover .card__image{
+    transform: scale(1.2);
+}    
+
 
 /* CAROUSEL CARD */
 .last-prod-carousel{
@@ -317,7 +325,7 @@
 }
 
 .lastCard .card__image{
-    height: 400px;
+    height: 370px;
 }
 
 .lastCard .card__header{
@@ -328,4 +336,45 @@
     font-size: 14px !important;
     font-weight: 900 !important;
 }
+
+
+
+/* WRITE SECTION */
+.write-section{
+    background: url('./media/bg-write.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.writeCard{
+    max-width: 310px;
+    /* min-height: 200px; */
+}
+
+.writeCard .card__image{
+    height: 370px;
+    max-width: 370px;
+}
+
+.writeCard .card__header{
+    justify-content: center;
+    background-color: var(--white);
+}
+
+.writeCard .card__overlay{
+    background-color: var(--white);
+}
+
+.writeCard .card__arc path{
+    fill: var(--white);
+}
+
+.writeCard:hover{
+    transform: scale(1.1);
+}
+
+.writeCard .card__image{
+    background-color: var(--emph-pink);
+}  
 
