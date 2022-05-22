@@ -50,3 +50,4 @@ const swiper = new Swiper('.last-prod-carousel', {
       }, false)
     })
 })()
+

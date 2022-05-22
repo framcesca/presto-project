@@ -68,6 +68,7 @@
     text-decoration: none;
     box-shadow: var(--shadow-card);
     transition: transform .4s ease-in-out;
+    border: none;
 
 }
 
