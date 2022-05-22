@@ -66,127 +66,30 @@
         </div>
     </nav>
     
-    <main style="min-height: 4000px;">
+    <main>
         <!-- HEADER -->
-        <header class="container-fluid products-masthead pt-4">          
-            <div class="row h-100 mt-5 mt-md-0 align-items-center">
-
-                <div class="col-12 d-flex align-items-center justify-content-center pt-5 mt-5">
-                    <img src="./media/bg-hero-products.png" alt="">
-                </div>
-                
-                <div class="col-12 d-flex align-items-center justify-content-center">
-                    <h2 class="fw-boldest display-5">Esplora gli anninci</h2>
-                </div>           
-            </div>       
+        <header class="container-fluid product-header pt-4">                
         </header>
         
-
-        <!-- BARRA RICERCA CON FILTRI -->
-        <section class="container  filter-section">
-            <div class="row align-items-end bgc-sec pt-4">
-                <div class="col-12 col-md-3">
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="mb-1 fw-boldest">Ricerca</p>
-                        </div>
-                        <div class="col-12 ps-1 form-floating mb-3">
-                            <input type="text" class="form-control" id="searchInput" placeholder="name@example.com">
-                            <label for="searchInput">Cerca un prodotto</label>
-                        </div>
+        <!-- SEZIONE ANNUNCIO -->
+        <section class="container py-5 my-5">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-md-6 col-lg-4 pe-xl-2 py-4 py-md-2">
+                    <div class="d-flex flex-column align-items-center justify-content-center">
+                        <h2 class="fs-5 fw-boldest d-md-none"><i class="fa-solid fa-chevron-left fa-2x"></i>Torna agli annunci</h2>
+                        <div class="p-card lastCard ">
+                            <img src="./media/giradischi.jpg" class="img-fluid card__image" alt="" />
+                            
+                        </div> 
                     </div>
                 </div>
-                <div class="col-12 col-md-3">
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="mb-1 fw-boldest">Categoria</p>
-                        </div>
-                        
-                        <div class="col-12 ps-1 form-floating mb-3">
-                            <select class="form-select" id="categoryInput" aria-label="Floating label select example">
-                              <option selected value="all">Tutte</option>
-                            </select>
-                            <!-- <label for="categoryInput">Categoria</label> -->
-                        </div>
-                    </div>
+                <div class="col-12 col-md-6 col-lg-4 ps-xl-2 py-4 py-md-0">
+                    <h2 class="fw-boldest mb-0 fs-3">Giradischi 1988</h2>
+                    <p class="fs-14">Venduta da Pierpaolo Pasolini (ma non quel Pierpaolo Pasolini)</p>
+                    <p class="fs-14">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, nesciunt atque similique necessitatibus, eaque nostrum quasi minus voluptatem nobis, ullam quis consequuntur totam .</p>
+                    <h2 class="fw-boldest display-6 my-4">420$</h2>
+                    <button class="btn w-100 fw-boldest py-2 fs-14" id="contattiBtn">Contatta il venditore</button>
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="mb-1 fw-boldest ps-2">Prezzo</p>
-                        </div>
-                        <div class="col-6 pe-1">
-                            <div class="form-floating mb-3 px-1">
-                                <input type="number" class="form-control" id="minInput" placeholder="Prezzo minimo">
-                                <label for="minInput">Min</label>
-                            </div>
-                        </div>
-                        <div class="col-6 ps-1">
-                            <div class="form-floating mb-3 px-1">
-                                <input type="number" class="form-control" id="maxInput" placeholder="Prezzo massimo">
-                                <label for="maxInput">Max</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-2">
-                    <button id="filterBtn" class="btn mbg-pink fw-boldest w-100 py-3 mb-3">Filtra</button>
-                </div>
-            </div>
-
-            <!-- filtri sotto -->
-            <div class="row mt-3">
-                <div class="col-12">
-                    <div class="d-flex align-items-center justify-content-end">
-                      <!-- icone stile griglia -->
-                    <!-- <div>
-                        <i class="fa-solid fa-table-cells-large fs-4 me-2"></i>
-                        <i class="fa-solid fa-table-list fs-4"></i>
-                      
-                    </div> -->
-
-                    <!-- filtri ordinamento -->
-                    <div class="d-flex align-items-center">
-                        <div class="d-flex align-items-center">
-                            <button product-type="all" class="btn btn-select-type-product active">Tutti</button>
-                            <span>|</span>
-                            <button product-type="search" class="btn btn-select-type-product">Cerco</button>
-                            <span>|</span>
-                            <button product-type="sell" class="btn btn-select-type-product">Vendo</button>
-                        </div>
-                        <div id="order-icon" class="me-2 fs-5">
-                            <i class="fa-solid fa-arrow-down-short-wide"></i>
-                        </div>
-                        <select id="orderInput" class="form-select" aria-label="Default select example">
-                            <option selected value="fromOldest">
-                                Dal più vecchio
-                            </option>
-                            <option value="fromNewest">
-                                Dal più recente
-                            </option>
-                            <option value="fromCheapest">
-                                Dal meno costoso
-                            </option>
-                            <option value="toCheapest">
-                                Dal più costoso
-                            </option>
-                            <option value="fromAtoZ">
-                                Dalla A alla Z
-                            </option>
-                            <option value="fromZtoA">
-                                Dalla Z alla A
-                            </option>
-
-                        </select>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="container">
-            <div class="row" id="productWrapper">
-
             </div>
         </section>
 
