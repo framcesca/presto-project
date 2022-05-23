@@ -58,6 +58,7 @@ fetch('./annunci.json')
 
 
 
+
     // EVENTI E RICHIAMI FUNZIONI 
     populateProducts();
     populateCategoryFilter();
