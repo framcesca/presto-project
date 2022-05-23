@@ -417,11 +417,20 @@
     },
     {
         "id": 49,
+        "name": "Sveglia",
+        "category": "Oggettistica",
+        "price": "19.99",
+        "type" : "sell",
+        "full_name": "Gianni Rolecs",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, nesciunt atque similique necessitatibus, eaque nostrum quasi minus voluptatem nobis, ullam quis consequuntur totam."
+    }, 
+    {
+        "id": 50,
         "name": "Giradischi",
         "category": "Vintage",
-        "price": "169.99",
+        "price": "420",
         "type" : "sell",
-        "full_name": "Willi Drewes",
+        "full_name": "Pierpaolo Pasolini",
         "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, nesciunt atque similique necessitatibus, eaque nostrum quasi minus voluptatem nobis, ullam quis consequuntur totam."
-    }    
+    }   
 ]
