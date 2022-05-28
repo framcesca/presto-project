@@ -175,6 +175,16 @@ fetch('./annunci.json')
         })
     }
 
+    // per utilizzare il cerca nella navbar
+    function initializeFilterFromQuery(){
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        let searched = urlParams.get('query');
+
+        searchInput.value = searched;
+
+        filterProducts();
+    }
 
 
 
@@ -189,5 +199,5 @@ fetch('./annunci.json')
 
     populateProducts();
     populateCategoryFilter();
-    
+    initializeFilterFromQuery();
 });
