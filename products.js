@@ -69,40 +69,34 @@ fetch('./annunci.json')
         let selectedMax = Number(maxInput.value) == 0 ? Infinity : Number(maxInput.value);;
 
         // filtro per search (uso include)
-        let filteredBySearch = products.filter(product =>{
+        let filteredIds = products.filter(product =>{
             return product.name.toLowerCase().includes(searched.toLowerCase());
-        });
-        // contatenazione con filtro per category
-        let filteredByCategory = filteredBySearch.filter(product =>{
+            // contatenazione con filtro per category
+        }).filter(product =>{
             return product.category === selectedCategory || selectedCategory == 'all';
-        });
-        // contatenazione con filtro per min
-        let filteredByMin = filteredByCategory.filter(product =>{
-            return Number(product.price) > selectedMin;
-        });
-        // contatenazione con filtro per max
-        let filteredByMax = filteredByMin.filter(product =>{
-            return Number(product.price) < selectedMax;
+            // contatenazione con filtro per min e max
+        }).filter(product =>{
+            return Number(product.price) > selectedMin && Number(product.price) < selectedMax;
             // mappo per avere tutti i products filtrati
         }).map(product => {
             return product.id;
         });
 
         // richiamo la funzione che mostra i products in base ai filtri
-        showHideProductsDomElements(filteredByMax);
+        showHideProductsDomElements(filteredIds);
 
     };
 
 
     // funzione per mostrare o nascondere card in base ai fltri
-    function showHideProductsDomElements(filteredByMax) {
+    function showHideProductsDomElements(ffilteredIds) {
         let domProducts = document.querySelectorAll('.product-element');
 
         domProducts.forEach(domElement => {
             // creo l'id al product
             let productId = Number(domElement.getAttribute('product-id'));
             // in base al filtro, tolgo e emtto la classe display-none
-            if(filteredByMax.includes(productId)){
+            if(ffilteredIds.includes(productId)){
                 domElement.classList.remove('d-none')
             } else {
                 domElement.classList.add('d-none')
