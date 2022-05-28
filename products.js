@@ -8,6 +8,7 @@ fetch('./annunci.json')
     const searchInput = document.querySelector('#searchInput');
     const minInput = document.querySelector('#minInput');
     const maxInput = document.querySelector('#maxInput');
+    const orderInput = document.querySelector('#orderInput');
 
     
     // FUNZIONI
@@ -105,16 +106,88 @@ fetch('./annunci.json')
     };
 
 
+    // funzione per ordinare le card
+    function orderProducts(){
+        let selectedOrder = orderInput.value;
+        const orderIcon = document.querySelector('#order-icon');
+
+        switch (selectedOrder) {
+            case 'fromOldest':
+                orderIcon.innerHTML = `<i class="fa-solid fa-arrow-down-short-wide"></i>`;
+                products.sort((a , b) => Number(a.id) - Number(b.id));
+                break;
+            case 'fromNewest':
+                orderIcon.innerHTML = `<i class="fa-solid fa-arrow-up-short-wide"></i>`;
+                products.sort((a , b) => Number(b.id) - Number(a.id));
+                break;
+            case 'fromCheapest':
+                orderIcon.innerHTML = `<i class="fa-solid fa-arrow-down-1-9"></i>`;
+                products.sort((a , b) => Number(a.price) - Number(b.price));
+                break;
+            case 'toCheapest':
+                orderIcon.innerHTML = `<i class="fa-solid fa-arrow-down-9-1"></i>`;
+                products.sort((a , b) => Number(b.price) - Number(a.price));
+                break;
+            case 'fromAtoZ':
+                orderIcon.innerHTML = `<i class="fa-solid fa-arrow-down-a-z"></i>`;
+                products.sort((a , b) => {
+                    const nameA = a.name.toLowerCase();  
+                    const nameB = b.name.toLowerCase();  
+                    if (nameA < nameB) {
+                        return -1;
+                    }
+                    if (nameA > nameB) {
+                        return 1;
+                    }
+                    // names must be equal
+                    return 0;
+                })
+                break;
+                case 'fromZtoA':
+                orderIcon.innerHTML = `<i class="fa-solid fa-arrow-down-z-a"></i>`;
+                products.sort((a , b) => {
+                    const nameA = a.name.toLowerCase(); 
+                    const nameB = b.name.toLowerCase(); 
+                    if (nameA > nameB) {
+                      return -1;
+                    }
+                    if (nameA < nameB) {
+                      return 1;
+                    }
+                    // names must be equal
+                    return 0;
+                })
+                break;
+        
+            default:
+                break;
+        }
+
+        orderDomProducts()
+    }
+
+    // funzione che mostra le card nell'ordine scelto
+    function orderDomProducts(){
+        products.forEach((product , index) => {
+            let domProduct = document.querySelector(`[product-id="${product.id}"]`);
+
+            domProduct.style.order = index;
+        })
+    }
+
+
+
+
 
 
 
     // EVENTI E RICHIAMI FUNZIONI 
 
-    // aggiundo l'event listener per il bottone filtra
-    filterBtn.addEventListener('click', filterProducts)
-
-
+    // aggiundo l'event listener per il bottone filtra per filtrare
+    filterBtn.addEventListener('click', filterProducts);
+    orderInput.addEventListener('input' , orderProducts);
 
     populateProducts();
     populateCategoryFilter();
+    
 });
