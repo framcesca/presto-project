@@ -23,7 +23,8 @@ fetch('./annunci.json')
             cardProduct.setAttribute('product-id', product.id)
             // aggiungo il contenuto del div
             cardProduct.innerHTML = `
-            <button href="" class="p-0 p-card lastCard" id="lastCardBtn">
+            <form action="./product.html" method="get" href="" class="p-0 p-card lastCard">
+                <input type="hidden" name="id" value="${product.id}">
                 <img src="./media/giradischi.jpg" class="img-fluid card__image" alt="" />
                 <div class="card__overlay">
                     <div class="card__header">
@@ -37,7 +38,7 @@ fetch('./annunci.json')
                     </div>
                     <p class="card__description text-center fw-bolder fs-6">Vedi articolo <span><i class="fa-solid fa-chevron-right"></i></span></p>
                 </div>
-            </button>
+            </form>
             `
 
             wrapper.appendChild(cardProduct);
@@ -175,13 +176,22 @@ fetch('./annunci.json')
         })
     }
 
-    // per utilizzare il cerca nella navbar
+    // collegamnento search nella navbar e categorie in hero in homepage
     function initializeFilterFromQuery(){
         const urlParams = new URLSearchParams(window.location.search);
         
         let searched = urlParams.get('query');
+        let category = urlParams.get('category');
 
         searchInput.value = searched;
+
+        let selectedCategoryOption = Array.from(categoryInput.children);
+        
+        selectedCategoryOption.forEach(el => {
+            if(el.value == category){
+                el.setAttribute('selected', 'selected');
+            }
+        });
 
         filterProducts();
     }
