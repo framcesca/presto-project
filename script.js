@@ -51,3 +51,7 @@ const swiper = new Swiper('.last-prod-carousel', {
     })
 })()
 
+
+
+// search
+let sear
